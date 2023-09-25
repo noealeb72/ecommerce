@@ -1,0 +1,6 @@
+video con la info
+https://www.youtube.com/watch?v=DpVRv1-4ECs&list=PLz_YkiqIHesvPtvLl2Wz5FtuW44dBt199&index=8
+
+
+Donde guarda las imagenes
+C:\laragon\www\diego-peluqueria\public\assets\images
