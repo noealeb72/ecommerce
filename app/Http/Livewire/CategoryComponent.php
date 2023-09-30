@@ -20,37 +20,39 @@ class CategoryComponent extends Component
         $this->pagesize = 12;
         $this->category_slug = $category_slug;
     }
-    
+
     use WithPagination;
     public function render()
     {
-        $category = Category::where('slug', $this->category_slug)->first();
-        $category_id = $category->id;
-        $category_name = $category->name;
+        try {
+            $category = Category::where('slug', $this->category_slug)->first();
+            $category_id = $category->id;
+            $category_name = $category->name;
+            if ($category_id) {
+                if ($this->sorting == 'date') {
+                    $products = Product::where('category_id', $category_id)->orderBy('created_at', 'DESC')->paginate($this->pagesize);
+                } else if ($this->sorting == 'price') {
+                    $products = Product::where('category_id', $category_id)->orderBy('regular_price', 'ASC')->paginate($this->pagesize);
+                } else if ($this->sorting == 'price-desc') {
+                    $products = Product::where('category_id', $category_id)->orderBy('regular_price', 'DESC')->paginate($this->pagesize);
+                } else {
+                    $products = Product::where('category_id', $category_id)->paginate($this->pagesize);
+                }
 
-        if($this->sorting == 'date'){
-            $products = Product::where('category_id', $category_id)->orderBy('created_at', 'DESC')->paginate($this->pagesize);
-        }
-        else if($this->sorting == 'price'){
-            $products = Product::where('category_id', $category_id)->orderBy('regular_price', 'ASC')->paginate($this->pagesize);
-        }
-        else if($this->sorting == 'price-desc'){
-            $products = Product::where('category_id', $category_id)->orderBy('regular_price', 'DESC')->paginate($this->pagesize);
-        }
-        else{
-            $products = Product::where('category_id', $category_id)->paginate($this->pagesize);
-        }
-        
-        $popular_products = Product::inRandomOrder()->limit(4)->get();
+                $popular_products = Product::inRandomOrder()->limit(4)->get();
 
-        $categories = Category::all();
-        
-        return view('livewire.category-component', [
-            'products' => $products,
-            'popular_products' => $popular_products,
-            'categories' => $categories,
-            'category_name' => $category_name
-        ])->layout('layouts.base');
+                $categories = Category::all();
+
+                return view('livewire.category-component', [
+                    'products' => $products,
+                    'popular_products' => $popular_products,
+                    'categories' => $categories,
+                    'category_name' => $category_name
+                ])->layout('layouts.base');
+            }
+        } catch (\Exception $e) {
+            dd($e->getMessage()); // Esto mostrará el mensaje de error completo en la pantalla.
+        }
     }
 
     public function store($product_id, $product_name, $product_price)
