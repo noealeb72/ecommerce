@@ -80,8 +80,8 @@ return [
     |
     */
 
-    'locale' => 'es',
-
+    //'locale' => 'es',
+    'locales' => ['en', 'es', 'br'],
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -93,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'es', // Idioma por defecto
 
     /*
     |--------------------------------------------------------------------------

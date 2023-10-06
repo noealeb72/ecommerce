@@ -1005,9 +1005,14 @@ li.menu-item .nav-label.sale-label::before{
 .wrap-main-slide .slide-carousel .slide-info{
     position: absolute;
 }
+.custom-slide-left {
+    text-align: left; /* Alineamos el texto a la izquierda */
+    padding-left: 80px; /* Espaciado izquierdo para ajustar la posición del contenido */
+    padding-right: 0; /* Eliminamos el espaciado derecho si es necesario */
+}
 .wrap-main-slide .slide-carousel .slide-info.slide-1{
-    top: 30%;
-    left: 40%;
+    top: 10%;
+    left: 15%;
     z-index: 15;
     transform: translate( 4px, -7px);
     -webkit-transform: translate( 4px, -7px);
