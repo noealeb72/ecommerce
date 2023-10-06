@@ -163,19 +163,21 @@
 								<a href="{{ url('/') }}" class="link-term mercado-item-title"><i class="fa fa-home" aria-hidden="true"></i></a>
 							</li>
 							<li class="menu-item">
-								<a href="{{ url('/about-us') }}" class="link-term mercado-item-title">About Us</a>
+								<a href="{{ url('/about-us') }}" class="link-term mercado-item-title">{!! trans('home.sobre_nosotros') !!}</a>
 							</li>
 							<li class="menu-item">
-								<a href="{{ url('/shop') }}" class="link-term mercado-item-title">Shop</a>
+								<a href="{{ url('/shop') }}" class="link-term mercado-item-title">{!! trans('home.tienda') !!}</a>
 							</li>
+							<!--
 							<li class="menu-item">
 								<a href="{{ url('/cart') }}" class="link-term mercado-item-title">Cart</a>
 							</li>
 							<li class="menu-item">
 								<a href="{{ url('/checkout') }}" class="link-term mercado-item-title">Checkout</a>
 							</li>
+								-->
 							<li class="menu-item">
-								<a href="{{ url('/contact-us') }}" class="link-term mercado-item-title">Contact Us</a>
+								<a href="{{ url('/contact-us') }}" class="link-term mercado-item-title">{!! trans('home.contacto') !!}</a>
 							</li>
 						</ul>
 					</div>
@@ -196,7 +198,7 @@
 						<li class="fc-info-item">
 							<i class="fa fa-truck" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Free Shipping</h4>
+								<h4 class="fc-name">{!! trans('home.envio_gratis') !!}</h4>
 								<p class="fc-desc">Free On Oder Over $99</p>
 							</div>
 
@@ -204,7 +206,7 @@
 						<li class="fc-info-item">
 							<i class="fa fa-recycle" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Guarantee</h4>
+								<h4 class="fc-name">{!! trans('home.garantia') !!}</h4>
 								<p class="fc-desc">30 Days Money Back</p>
 							</div>
 
@@ -212,7 +214,7 @@
 						<li class="fc-info-item">
 							<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Safe Payment</h4>
+								<h4 class="fc-name">{!! trans('home.metodo_pago') !!}</h4>
 								<p class="fc-desc">Safe your online payment</p>
 							</div>
 
@@ -220,7 +222,7 @@
 						<li class="fc-info-item">
 							<i class="fa fa-life-ring" aria-hidden="true"></i>
 							<div class="wrap-left-info">
-								<h4 class="fc-name">Online Suport</h4>
+								<h4 class="fc-name">{!! trans('home.soporte_en_linea') !!}</h4>
 								<p class="fc-desc">We Have Support 24/7</p>
 							</div>
 
@@ -238,21 +240,21 @@
 
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
-								<h3 class="item-header">Contact Details</h3>
+								<h3 class="item-header">{!! trans('home.datos_contacto') !!}</h3>
 								<div class="item-content">
 									<div class="wrap-contact-detail">
 										<ul>
 											<li>
 												<i class="fa fa-map-marker" aria-hidden="true"></i>
-												<p class="contact-txt">45 Grand Central Terminal New York,NY 1017 United State USA</p>
+												<p class="contact-txt">Fader 360, Mendoza Argentina</p>
 											</li>
 											<li>
 												<i class="fa fa-phone" aria-hidden="true"></i>
-												<p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+												<p class="contact-txt">(+549) 261 3014125</p>
 											</li>
 											<li>
 												<i class="fa fa-envelope" aria-hidden="true"></i>
-												<p class="contact-txt">Contact@yourcompany.com</p>
+												<p class="contact-txt">contact@orangeartelaser.com</p>
 											</li>
 										</ul>
 									</div>
@@ -261,7 +263,7 @@
 						</div>
 
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
-
+							<!-- 
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Hot Line</h3>
 								<div class="item-content">
@@ -271,13 +273,13 @@
 									</div>
 								</div>
 							</div>
-
+							-->
 							<div class="wrap-footer-item footer-item-second">
-								<h3 class="item-header">Sign up for newsletter</h3>
+								<h3 class="item-header">{!! trans('home.boletin') !!}</h3>
 								<div class="item-content">
 									<div class="wrap-newletter-footer">
 										<form action="#" class="frm-newletter" id="frm-newletter">
-											<input type="email" class="input-email" name="email" value="" placeholder="Enter your email address">
+											<input type="email" class="input-email" name="email" value="" placeholder="{!! trans('home.direccion_correo') !!}">
 											<button class="btn-submit">Subscribe</button>
 										</form>
 									</div>
@@ -289,29 +291,28 @@
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12 box-twin-content ">
 							<div class="row">
 								<div class="wrap-footer-item twin-item">
-									<h3 class="item-header">My Account</h3>
+									<h3 class="item-header">{!! trans('home.mi_cuenta') !!}</h3>
 									<div class="item-content">
 										<div class="wrap-vertical-nav">
 											<ul>
-												<li class="menu-item"><a href="#" class="link-term">My Account</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Brands</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Gift Certificates</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Affiliates</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Wish list</a></li>
+												<li class="menu-item"><a href="#" class="link-term">{!! trans('home.cuenta') !!}</a></li>
+												<!-- <li class="menu-item"><a href="#" class="link-term">Brands</a></li>-->
+												<li class="menu-item"><a href="#" class="link-term">{!! trans('home.gift') !!}</a></li>
+												<!--<li class="menu-item"><a href="#" class="link-term">Affiliates</a></li>-->
+												<li class="menu-item"><a href="#" class="link-term">{!! trans('home.lista_deseos') !!}</a></li>
 											</ul>
 										</div>
 									</div>
 								</div>
 								<div class="wrap-footer-item twin-item">
-									<h3 class="item-header">Infomation</h3>
+									<h3 class="item-header">{!! trans('home.informacion') !!}</h3>
 									<div class="item-content">
 										<div class="wrap-vertical-nav">
 											<ul>
-												<li class="menu-item"><a href="#" class="link-term">Contact Us</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Returns</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Site Map</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Specials</a></li>
-												<li class="menu-item"><a href="#" class="link-term">Order History</a></li>
+												<li class="menu-item"><a href="#" class="link-term">{!! trans('home.contactanos') !!}</a></li>
+												<li class="menu-item"><a href="#" class="link-term">{!! trans('home.politica_privacidad') !!}</a></li>
+												<li class="menu-item"><a href="#" class="link-term">{!! trans('home.Envíos_retiros') !!}</a></li>
+												<li class="menu-item"><a href="#" class="link-term">{!! trans('home.politica_devolucion') !!}</a></li>
 											</ul>
 										</div>
 									</div>
@@ -325,7 +326,7 @@
 
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
-								<h3 class="item-header">We Using Safe Payments:</h3>
+								<h3 class="item-header">{!! trans('home.pago_seguros') !!}</h3>
 								<div class="item-content">
 									<div class="wrap-list-item wrap-gallery">
 										<img src="{{ asset('assets/images/payment.png') }}" style="max-width: 260px;">
@@ -340,17 +341,17 @@
 								<div class="item-content">
 									<div class="wrap-list-item social-network">
 										<ul>
-											<li><a href="#" class="link-to-item" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+											<!--<li><a href="#" class="link-to-item" title="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>-->
 											<li><a href="#" class="link-to-item" title="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+											<!--<li><a href="#" class="link-to-item" title="pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>>-->
 											<li><a href="#" class="link-to-item" title="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-											<li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
+											<!--<li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>-->
 										</ul>
 									</div>
 								</div>
 							</div>
 						</div>
-
+						<!--
 						<div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 							<div class="wrap-footer-item">
 								<h3 class="item-header">Dowload App</h3>
@@ -368,10 +369,10 @@
 								</div>
 							</div>
 						</div>
-
+						-->
 					</div>
 				</div>
-
+				<!--
 				<div class="wrap-back-link">
 					<div class="container">
 						<div class="back-link-box">
@@ -421,21 +422,21 @@
 						</div>
 					</div>
 				</div>
-
+-->
 			</div>
 
 			<div class="coppy-right-box">
 				<div class="container">
 					<div class="coppy-right-item item-left">
-						<p class="coppy-right-text">Copyright © 2021 FernandoCalmet. All rights reserved</p>
+						<p class="coppy-right-text">Copyright © 2023 NAB. All rights reserved</p>
 					</div>
 					<div class="coppy-right-item item-right">
 						<div class="wrap-nav horizontal-nav">
 							<ul>
-								<li class="menu-item"><a href="{{ url('/about-us') }}" class="link-term">About us</a></li>
-								<li class="menu-item"><a href="{{ url('/privacy-policy') }}" class="link-term">Privacy Policy</a></li>
-								<li class="menu-item"><a href="{{ url('/terms-conditions') }}" class="link-term">Terms & Conditions</a></li>
-								<li class="menu-item"><a href="{{ url('/return-policy') }}" class="link-term">Return Policy</a></li>
+								<li class="menu-item"><a href="{{ url('/about-us') }}" class="link-term">{!! trans('home.acerca_nosotros') !!}</a></li>
+								<li class="menu-item"><a href="{{ url('/privacy-policy') }}" class="link-term"> {!! trans('home.politica_privacidad') !!}</a></li>
+								<li class="menu-item"><a href="{{ url('/terms-conditions') }}" class="link-term">{!! trans('home.terminos_condiciones') !!}</a></li>
+								<li class="menu-item"><a href="{{ url('/return-policy') }}" class="link-term">{!! trans('home.politica_devolucion') !!}</a></li>
 							</ul>
 						</div>
 					</div>

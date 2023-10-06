@@ -6,30 +6,29 @@
             <div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
                 <div class="item-slide">
                     <img src="{{ asset('assets/images/main-slider-1-1.jpg') }}" alt="" class="img-slide">
-                    <div class="slide-info slide-1">
-                        <h2 class="f-title">Kid Smart <b>Watches</b></h2>
-                        <span class="subtitle">Compra todos tus productos Smart por internet.</span>
-                        <p class="sale-info">Only price: <span class="price">$59.99</span></p>
-                        <a href="#" class="btn-link">Shop Now</a>
+                    <div class="slide-info slide-1 custom-slide-left">
+                        <h2 class="f-title"><b>{{ trans('home.titleFrase1') }}</b></h2>
+                        <span class="subtitle">{{ trans('home.subtitleFrase1') }}</span>
+                        <p class="sale-info"><!--¡Solo desde: <span class="price">$19.99</span>!--></p>
+                        <a href="#" class="btn-link">{{trans('home.botonFrase1') }}</a>
                     </div>
                 </div>
                 <div class="item-slide">
                     <img src="{{ asset('assets/images/main-slider-1-2.jpg') }}" alt="" class="img-slide">
-                    <div class="slide-info slide-2">
-                        <h2 class="f-title">Extra 25% Off</h2>
-                        <span class="f-subtitle">On online payments</span>
-                        <p class="discount-code">Use Code: #FA6868</p>
-                        <h4 class="s-title">Get Free</h4>
-                        <p class="s-subtitle">TRansparent Bra Straps</p>
+                    <div class="slide-info slide-3">
+                        <h2 class="f-title">{!! trans('home.titleFrase2') !!}</h2>
+                        <span class="f-subtitle">{!! trans('home.subtitleFrase2') !!}</span>
+                        <p class="sale-info"><!--Stating at: <b class="price">$225.00</b>!--></p>
+                        <a href="#" class="btn-link">{!! trans('home.botonFrase2') !!}</a>
                     </div>
                 </div>
                 <div class="item-slide">
                     <img src="{{ asset('assets/images/main-slider-1-3.jpg') }}" alt="" class="img-slide">
                     <div class="slide-info slide-3">
-                        <h2 class="f-title">Great Range of <b>Exclusive Furniture Packages</b></h2>
-                        <span class="f-subtitle">Exclusive Furniture Packages to Suit every need.</span>
-                        <p class="sale-info">Stating at: <b class="price">$225.00</b></p>
-                        <a href="#" class="btn-link">Shop Now</a>
+                        <h2 class="f-title">{!! trans('home.titleFrase3') !!}</b></h2>
+                        <span class="f-subtitle">{!! trans('home.subtitleFrase3') !!}</span>
+                        <p class="sale-info"><!--Stating at: <b class="price">$225.00</b>!--></p>
+                        <a href="#" class="btn-link">{!! trans('home.botonFrase3') !!}</a>
                     </div>
                 </div>
             </div>
@@ -40,13 +39,19 @@
             <div class="banner-item">
                 <a href="#" class="link-banner banner-effect-1">
                     <figure><img src="{{ asset('assets/images/home-1-banner-1.jpg') }}" alt="" width="580" height="190"></figure>
+
                 </a>
             </div>
             <div class="banner-item">
-                <a href="#" class="link-banner banner-effect-1">
-                    <figure><img src="{{ asset('assets/images/home-1-banner-2.jpg') }}" alt="" width="580" height="190"></figure>
+                <a href="#" class="link-banner banner-effect-1 f-title" style="position: relative; display: inline-block;">
+                    <figure style="margin: 0;">
+                        <img src="{{ asset('assets/images/home-1-banner-2.jpg') }}" alt="" width="580" height="190">
+                        <h4 class="f-title" style="position: absolute; top: 20%; left: 25%; transform: translate(-50%, -50%); padding: 10px; font-size: 14px; color: #000;">{!! trans('home.bannerAbajo1') !!}</b></h2>
+                            <a href="#" class="btn-link">{!! trans('home.botonFrase3') !!}</a>
+                    </figure>
                 </a>
             </div>
+
         </div>
 
         <!--On Sale
@@ -238,7 +243,7 @@
 -->
         <!--Latest Products-->
         <div class="wrap-show-advance-info-box style-1">
-            <h3 class="title-box">Latest Products</h3>
+            <h3 class="title-box">{!! trans('home.productos_destacados') !!}</h3>
             <div class="wrap-top-banner">
                 <a href="#" class="link-banner banner-effect-2">
                     <figure><img src="{{ asset('assets/images/digital-electronic-banner.jpg') }}" width="1170" height="240" alt="">
@@ -430,7 +435,7 @@
 
         <!--Product Categories-->
         <div class="wrap-show-advance-info-box style-1">
-            <h3 class="title-box">Product Categories</h3>
+            <h3 class="title-box">{!! trans('home.categorias') !!}</h3>
             <div class="wrap-top-banner">
                 <a href="#" class="link-banner banner-effect-2">
                     <figure><img src="{{ asset('assets/images/fashion-accesories-banner.jpg') }}" width="1170" height="240" alt="">
