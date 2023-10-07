@@ -93,8 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'es', // Idioma por defecto
-
+    'fallback_locale' => 'es', // Idioma por defectos
     /*
     |--------------------------------------------------------------------------
     | Faker Locale

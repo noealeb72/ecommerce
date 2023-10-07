@@ -58,6 +58,13 @@ return [
 
     "todas_categorias" => "Todas las categorías",
 
+    "producto_nuevo" => "Nuevo",
+    "producto_mas_vendido" => "Destacado",
+    "producto_descuento" => "Oferta",
+    "vista_rapida" => "Vista rápida"
+
+
+
 
 
 
