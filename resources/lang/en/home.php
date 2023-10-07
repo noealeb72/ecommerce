@@ -54,5 +54,11 @@ return [
 
     "todas_categorias" => "All Category",
 
+    "producto_nuevo" => "New",
+    "producto_mas_vendido" => "Bestseller",
+    "producto_descuento" => "Discount",
+    "vista_rapida" => " Quick view"
+
+
 
 ];

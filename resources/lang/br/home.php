@@ -54,5 +54,11 @@ return [
 
     "todas_categorias" => "Todas as categorias",
 
+    "producto_nuevo" => "Novo",
+    "producto_mas_vendido" => "Maisvendido",
+    "producto_descuento" => "Desconto",
+    "vista_rapida" => "Visualização"
+
+
 
 ];
