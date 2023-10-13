@@ -15,6 +15,7 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\TermsConditionsComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\RouteFileRegistrar;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,11 +66,18 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 */
 
 // Dashboard particular para usuarios o clientes
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');
 });
 
 // Dashboard particular para administradores
-Route::middleware(['auth:sanctum', 'verified'])->group(function(){
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/admin/dashboard', AdminDashboardComponent::class)->name('admin.dashboard');
+});
+
+Route::get('/locale/{locale}', function ($locale) {
+    return redirect()->back()->withCookie('locale', $locale);
+});
+
+Route::middleware('localization')->group(function () {
 });
